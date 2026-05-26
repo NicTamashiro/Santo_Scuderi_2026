@@ -19,7 +19,7 @@ void adicionar(char * marca){
 
 int consumir(char * marca1){
     for(int i = tamanho - 1; i >= 0; i--){
-        if(strcmp(mochila[i], marca1) == 0 || strcmp(mochila[i], "light") == 0){
+        if(strcmp(mochila[i], marca1) == 0 || strcmp(mochila[i], "Light") == 0){
             for(int j = i; j < tamanho - 1; j++){
                 strcpy(mochila[j], mochila[j + 1]);
             }
@@ -56,7 +56,7 @@ int main(){
             adicionar("Earth");
         } else if(strcmp(habilidade, "RadiantLight") == 0){
             aprimorou = 0;
-            adicionar("light");
+            adicionar("Light");
         }
 
         printf("%c\n", aprimorou ? 'A' : 'N');
